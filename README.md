@@ -32,7 +32,7 @@ The URL of a game typically looks like this:
 where "C261457LCNMJ" at the end is the ID of the game.
 
 The file `gamelist.txt` has no specific format. The program will extract
-all URLs from it. If a line starts with `#`, then it'll be discarded.
+all URLs from it. If a line starts with a `#` sign, then the line will be discarded.
 
 When you are ready with the file `gamelist.txt`, start the program:
 
