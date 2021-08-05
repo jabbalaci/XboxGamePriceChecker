@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "xbox_game_price_checker"
+version = "0.1.0"
+description = ""
+authors = ["Jabba Laci <jabba.laci@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.26.0"
+yachalk = "^0.1.4"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.910"
+types-requests = "^2.25.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
