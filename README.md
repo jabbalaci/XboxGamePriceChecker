@@ -5,6 +5,11 @@ A simple command-line program that checks the price
 of a list of Xbox games. It's useful if you want to
 buy some games on sale.
 
+Screenshot
+----------
+
+![screenshot](assets/screenshot.png)
+
 Usage
 -----
 
@@ -44,11 +49,6 @@ if you live in the US, use these values:
 
     MARKET = "US"
     LOCALE = "en-US"
-
-Screenshot
-----------
-
-![screenshot](assets/screenshot.png)
 
 Links
 -----
