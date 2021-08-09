@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os
 import re
 from pprint import pprint
 from typing import Dict, List
@@ -66,4 +67,5 @@ def main() -> None:
 ##############################################################################
 
 if __name__ == "__main__":
+    os.system("clear")
     main()
