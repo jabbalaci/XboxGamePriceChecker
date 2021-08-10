@@ -11,4 +11,5 @@ cd "$bak"
 
 export PATH=$VENV_DIR/bin:$PATH
 
+clear
 $SCRIPTPATH/main.py "$@"

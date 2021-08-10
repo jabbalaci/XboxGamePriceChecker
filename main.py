@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import os
 import re
 from pprint import pprint
 from typing import Dict, List
@@ -12,6 +11,7 @@ from lib import store
 Url = str
 
 INPUT = "gamelist.txt"
+
 
 class Game:
     def __init__(self, url: Url) -> None:
@@ -67,5 +67,4 @@ def main() -> None:
 ##############################################################################
 
 if __name__ == "__main__":
-    os.system("clear")
     main()
