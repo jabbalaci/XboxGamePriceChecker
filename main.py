@@ -50,18 +50,27 @@ def main() -> None:
     games: List[Game] = [Game(url) for url in urls]
     for game in games:
         d: Dict = store.get_game_by_id(game.id)
-        price: Dict = store.extract_price(d)
-        # pprint(price)
         game.title = store.extract_title(d)
+        try:
+            price: Dict = store.extract_price(d)
+        except KeyError:
+            template_error = f"""
+{game.title if not game.on_sale() else chalk.green.bg_gray.bold(game.title)} [ {game.url} ]
+({chalk.red.bold("error")})
+{"-" * 20}
+""".strip()
+            print(template_error, flush=True)
+            continue
+        # pprint(price)
         game.currency = price['CurrencyCode']
         game.prev_price = int(price['MSRP'])
         game.now_price = int(price['ListPrice'])
-        template = f"""
+        template_ok = f"""
 {game.title if not game.on_sale() else chalk.green.bg_gray.bold(game.title)} [ {game.url} ]
 (before: {fmt(game.prev_price)} {game.currency}, now: {fmt(game.now_price)} {game.currency})
 {"-" * 20}
 """.strip()
-        print(template, flush=True)
+        print(template_ok, flush=True)
         # break
 
 ##############################################################################

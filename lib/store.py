@@ -2,6 +2,7 @@
 
 from typing import Dict
 
+import json
 import requests
 import settings
 
@@ -13,7 +14,15 @@ def get_game_by_id(_id: str) -> Dict:
 
 
 def extract_price(d: Dict) -> Dict:
-    price: Dict = d['Products'][0]['DisplaySkuAvailabilities'][0]['Availabilities'][0]['OrderManagementData']['Price']
+    price: Dict = {}
+    try:
+        price = d['Products'][0]['DisplaySkuAvailabilities'][0]['Availabilities'][0]['OrderManagementData']['Price']
+    except KeyError:
+        # print("--> error, see debug.json")
+        # with open("debug.json", "w") as f:
+            # json.dump(d, f, indent=2)
+        raise
+    #
     return price
 
 
