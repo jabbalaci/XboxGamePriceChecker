@@ -45,7 +45,7 @@ def fmt(n: int) -> str:
 
 
 def main() -> None:
-    urls: List[Url] = extract_urls(INPUT, must_contain="www.microsoft.com")
+    urls: List[Url] = extract_urls(INPUT, must_contain="www.xbox.com")
 
     games: List[Game] = [Game(url) for url in urls]
     for game in games:

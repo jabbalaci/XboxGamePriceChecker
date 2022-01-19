@@ -27,7 +27,7 @@ If you want to register a game in this program, then simply
 copy the URL of the game and paste it in the file `gamelist.txt`.
 The URL of a game typically looks like this:
 
-    https://www.microsoft.com/en-us/p/the-witcher-3-wild-hunt--game-of-the-year-edition/C261457LCNMJ
+    https://www.xbox.com/en-us/p/the-witcher-3-wild-hunt--game-of-the-year-edition/C261457LCNMJ
 
 where "C261457LCNMJ" at the end is the ID of the game.
 
